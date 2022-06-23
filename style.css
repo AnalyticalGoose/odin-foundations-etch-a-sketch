@@ -1,8 +1,7 @@
 * {
     border: 1px solid red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
 
 #gridContainer {
     height: 50vh;
@@ -15,4 +14,15 @@
 
 #gridContainer div {
     border: 1px solid black;
+}
+
+.colouredIn {
+    background-color: grey;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding: 0.5vw;
+    gap: 1vw;
 }

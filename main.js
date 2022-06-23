@@ -1,11 +1,10 @@
 const gridDiv = document.querySelector('#gridContainer')
-const squares = document.getElementById('.square')
-
+const resetBtn = document.getElementById('reset')
 
 let size = 16
 let gridSize = size*size
 
-function createSquare () {
+function createSquare() {
     let square = document.createElement('div')
     square.classList.add('square')
     return square 
@@ -17,9 +16,27 @@ function createGrid (gridSize) {
     }
 }
 
+function colourIn() {
+    let allSquares = document.querySelectorAll('.square');
+    allSquares.forEach(s => {
+        s.addEventListener('mouseover', function(event) {
+            s.classList.add('colouredIn')
+        })
+    })
+}
+
+function reset() {
+    let allSquares = document.querySelectorAll('.square');
+    allSquares.forEach(s => {
+        s.classList.remove('colouredIn')
+    })
+}
+
+
 createGrid(gridSize)
 gridDiv.setAttribute(`style`, `grid-template-columns:repeat(${size}, auto);`)
+colourIn()
 
-gridDiv.addEventListener('click', function(event) {
-    console.log(event)
+resetBtn.addEventListener('click', function (event) {
+    reset()
 })
