@@ -1,0 +1,18 @@
+* {
+    border: 1px solid red;
+}
+
+
+
+#gridContainer {
+    height: 50vh;
+    width: 50vh;
+    display: grid;
+    grid-template-columns:repeat(16, auto);
+    margin: auto;
+    padding-top: 25vh;
+}
+
+#gridContainer div {
+    border: 1px solid black;
+}
