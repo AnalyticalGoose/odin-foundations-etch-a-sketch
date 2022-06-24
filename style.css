@@ -1,6 +1,32 @@
 * {
-    border: 1px solid red;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* border: 1px solid red; */
+}
+
+body {
+    padding-top: 17vh;
+    background-color: rgba(28, 8, 119, 0.274);
+}
+
+#gridFormat {
+    height: 8vh;
+    background-color: #bd1d1a;
+    width: 66vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family:'Courier New', Courier, monospace;
+    font-size: 3em;
+    font-weight: bolder;
+    color: rgb(231, 181, 53);
+}
+
+#gridRange {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: rgb(231, 181, 53);
 }
 
 #gridContainer {
@@ -9,11 +35,22 @@
     display: grid;
     grid-template-columns:repeat(16, auto);
     margin: auto;
-    padding-top: 25vh;
+    border-left: 8vh solid #bd1d1a;
+    border-right: 8vh solid #bd1d1a;
+    background-color: #d9d9d9;
 }
 
-#gridContainer div {
-    border: 1px solid black;
+.square {
+    border: 1px solid #c5c5c5;
+}
+
+#resetBtn {
+    background-color: #c5c5c5;
+    padding: 0px 8px;
+    font-size: 1.3em;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    border-radius: 6px;
 }
 
 .colouredIn {
@@ -23,6 +60,9 @@
 .buttons {
     display: flex;
     justify-content: center;
-    padding: 0.5vw;
-    gap: 1vw;
+    padding: 1.5vw 0vw;
+    gap: 2vw;
+    width: 66vh;
+    margin:auto;
+    background-color: #bd1d1a;
 }

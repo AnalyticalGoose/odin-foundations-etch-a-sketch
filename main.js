@@ -1,5 +1,9 @@
 const gridDiv = document.querySelector('#gridContainer')
-const resetBtn = document.getElementById('reset')
+
+const resetBtn = document.getElementById('resetBtn')
+
+const slider = document.getElementById('myRange')
+let output = document.getElementById('gridRange')
 
 let size = 16
 let gridSize = size*size
@@ -32,11 +36,24 @@ function reset() {
     })
 }
 
+resetBtn.addEventListener('click', function () {
+    reset()
+    
+})
+
+slider.oninput = function () {
+    output.textContent = this.value +" X "+ this.value;    
+}
+
+slider.onchange = () => {
+    gridDiv.replaceChildren();
+    size = parseInt(slider.value)
+    gridSize = size*size
+    createGrid(gridSize)
+    gridDiv.setAttribute(`style`, `grid-template-columns:repeat(${size}, auto);`)
+    colourIn()
+}
 
 createGrid(gridSize)
 gridDiv.setAttribute(`style`, `grid-template-columns:repeat(${size}, auto);`)
 colourIn()
-
-resetBtn.addEventListener('click', function (event) {
-    reset()
-})
